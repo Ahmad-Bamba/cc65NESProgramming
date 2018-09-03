@@ -33,13 +33,14 @@ INT main() {
 
     // load the text
     PPU_ADDRESS = 0x21; // set an address in the PPU of 0x21ca
-    PPU_ADDRESS = 0xca;  // about the middle of the screen
+    PPU_ADDRESS = 0xce;  // about the middle of the screen
     for(i = 0; i < sizeof(text); i++)
         PPU_DATA = text[i];
 
     // reset the scroll position
     PPU_ADDRESS = 0;
     PPU_ADDRESS = 0;
+    SCROLL = 0;
     SCROLL = 0;
 
     // turn on screen
